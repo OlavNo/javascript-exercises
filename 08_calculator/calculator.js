@@ -8,18 +8,16 @@ const subtract = function(num1, num2) {
 };
 
 const sum = function(array) {
-  var sum = 0;
-	for (var i = 0; i < array.length; i++) {
-    sum += array[i];
-  }
+  var sum = array.reduce((total, current) => {
+    return total + current;
+  }, 0)
   return sum;
 };
 
 const multiply = function(array) {
-  var mul = 1;
-	for (var i = 0; i < array.length; i++) {
-    mul *= array[i];
-  }
+  var mul = array.reduce((total, current) => {
+    return total * current;
+  })
   return mul;
 };
 
